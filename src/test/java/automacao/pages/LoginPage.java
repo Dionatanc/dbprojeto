@@ -35,4 +35,13 @@ public class LoginPage {
         Driver.visibilityOf(loginMap.txtLogado);
         return loginMap.txtLogado.getText();
     }
+    
+    public void visibilityOfBtnLogar(){
+        Driver.visibilityOf(loginMap.btnLogin);
+    }
+    
+    public void invisibilityOfBtnLogar(){
+        Driver.invisibilityOf(loginMap.btnLogin);
+    }
+    
 }

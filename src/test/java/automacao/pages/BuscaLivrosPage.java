@@ -1,27 +1,33 @@
 package automacao.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import automacao.core.Driver;
 import automacao.maps.BuscaLivrosMap;
-import automacao.maps.LoginMap;
 
 public class BuscaLivrosPage {
 	
 	BuscaLivrosMap buscaLivrosMap;
 	
 	
-	public BuscaLivrosPage()  {
+	public BuscaLivrosPage()   {
 		buscaLivrosMap = new BuscaLivrosMap();
-		
 		PageFactory.initElements(Driver.getDriver(), buscaLivrosMap);
+		
 	}
 	
-	public void clickBtnBookStore() {
-		buscaLivrosMap.btnBookStore.click();
+	
+	public void clickBtnBookStore()  {
+		
+		buscaLivrosMap.btnBookStoreMenuPrincipal.click();
+		buscaLivrosMap.btnBookStoreMenuPrincipal.click();
+
+		
 	}	
 	
 	public void clicaCampoBuscaLivros() {
+		buscaLivrosMap.inputBuscaBookName.clear();
 		buscaLivrosMap.inputBuscaBookName.click();
 
 	}
@@ -30,9 +36,14 @@ public class BuscaLivrosPage {
 		buscaLivrosMap.inputBuscaBookName.sendKeys(bookName);		
 	} 
 	
-	public void clickBtnAddToYourColletion(){
-		buscaLivrosMap.btnAddBookName.click();
+	public void clickTitleBookName() {
+		Driver.visibilityOf(buscaLivrosMap.linkTitleBookName);
+		buscaLivrosMap.linkTitleBookName.click();
 		
+	}
+	
+	public void clickBtnAddToYourColletion(){
+		buscaLivrosMap.btnAddBookName.click();		
 	}
 
 }
