@@ -60,10 +60,15 @@ public class LoginSteps {
 	public void deveSerPossivelEntrarNoSistema() throws IOException {
 		Assert.assertEquals(username, loginPage.getUsuarioLogado());
 		
-	}
+	}	
 	
 	
-	
-	
+    @Dado("que esteja logado no sistema com")
+    public void queEstejaLogadoNoSistemaCom(Map<String, String> map) throws IOException {
+    	queAPaginaEstejaSendoExibida();
+        osCamposDeLoginForemPreenchidosDaSeguinteForma(map);
+        forRealizadoOCliqueNoBotaoLogIn();
+        deveSerPossivelEntrarNoSistema();
+    }
 	
 }

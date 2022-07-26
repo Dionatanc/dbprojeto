@@ -5,8 +5,7 @@ Funcionalidade: Busca de Livros
     Dado que esteja logado no sistema com
       | login    | testeDionatan |
       | password | Senha2020$    |
-    Quando for realizado o clique no botao BookStore
-    Dado que esteja na pagina logado
+    Quando for realizado clique em BookStore       
     Quando pesquiso os valores dos seguintes livros
       | bookname | Speaking JavaScript |
     Quando for realizado clique em Add to Your Collection
